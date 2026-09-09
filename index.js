@@ -4,8 +4,8 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     
    
-    const fio = "Барбажинский Арсений Леонидович";
-    const group = "Группа 478";
+    const fio = "Р‘Р°СЂР±Р°Р¶РёРЅСЃРєРёР№ РђСЂСЃРµРЅРёР№ Р›РµРѕРЅРёРґРѕРІРёС‡";
+    const group = "Р“СЂСѓРїРїР° 478";
     
         const piValue = (() => { 
         let p = 0; 
@@ -23,5 +23,5 @@ const server = http.createServer((req, res) => {
 
 const PORT = 3000;
 server.listen(PORT, () => {
-    console.log(`Сервер запущен на http://localhost:${PORT}`);
+    console.log(`Г‘ГҐГ°ГўГҐГ° Г§Г ГЇГіГ№ГҐГ­ Г­Г  http://localhost:${PORT}`);
 });
