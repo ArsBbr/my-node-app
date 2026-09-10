@@ -1,4 +1,4 @@
-// logger.js — Задание 2: система логирования через события
+
 const fs = require('fs');
 
 function setupLogger(app) {
