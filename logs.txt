@@ -1,0 +1,5 @@
+[2026-09-10T17:51:32.228Z] server:started: port=3000
+[2026-09-10T17:51:42.228Z] server:stopped: server stopped
+[2026-09-10T17:53:37.178Z] server:started: port=3000
+[2026-09-10T17:53:42.908Z] request:received: GET /
+[2026-09-10T17:53:47.182Z] server:stopped: server stopped
