@@ -1,6 +1,6 @@
 
 const http = require('http');
-const EventEmitter = require('events');
+const EventEmitter = require('events'); // for fix
 const { setupLogger } = require('./logger');
 
 class AppServer extends EventEmitter {
