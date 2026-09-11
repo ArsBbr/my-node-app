@@ -1,49 +1,27 @@
-
 const http = require('http');
-const EventEmitter = require('events');
-const { setupLogger } = require('./logger');
 
-class AppServer extends EventEmitter {
-  constructor() {
-    super();
-    this.server = null;
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    
+   
+    const fio = "Барбажинский Арсений Леонидович";
+    const group = "Группа 478";
+    
+        const piValue = (() => { 
+        let p = 0; 
+        for (let i = 0; i < 100; i++) p += (i % 2 ? -1 : 1) / (i * 2 + 1); 
+        return (p * 4).toFixed(1); 
+    })();
 
-    this.on('server:started', (port) => {
-      console.log(` Сервер запущен на порту ${port}`);
-    });
-    this.on('request:received', (req) => {
-      console.log(` Получен запрос: ${req.method} ${req.url}`);
-    });
-    this.on('server:stopped', () => {
-      console.log(' Сервер остановлен');
-    });
-  }
+    
+    res.end(`
+        <p>${fio}</p>
+        <p>${group}</p>
+        <p>${piValue}</p>
+    `);
+});
 
-  start(port) {
-    this.server = http.createServer((req, res) => {
-      this.emit('request:received', req);
-      res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-      res.end('Hello from Event-Driven Server!');
-    });
-    this.server.listen(port, () => {
-      this.emit('server:started', port);
-    });
-  }
-
-  stop() {
-    if (this.server) {
-      this.server.close(() => this.emit('server:stopped'));
-    }
-  }
-}
-
-const app = new AppServer();
-
-
-setupLogger(app);
-
-app.start(3000);
-
-setTimeout(() => {
-  app.stop();
-}, 10000);
+const PORT = 3000;
+server.listen(PORT, () => {
+    console.log(`Ñåðâåð çàïóùåí íà http://localhost:${PORT}`);
+});
