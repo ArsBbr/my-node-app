@@ -84,7 +84,7 @@ async function processFile() {
     
     await fsp.writeFile(OUTPUT_FILE, resultsText + '\n', 'utf-8');
 
-    console.log('✅ Обработка завершена!');
+    console.log('Обработка завершена!');
     console.log(resultsText);
     console.log(`💾 Результаты сохранены в: ${OUTPUT_FILE}`);
 }
