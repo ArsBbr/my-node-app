@@ -1,3 +1,9 @@
 node_modules/
 .env
 .DS_Store
+data_*.txt
+processed_*.txt
+report_*.json
+student_*.txt
+project_*/
+demo.js*
