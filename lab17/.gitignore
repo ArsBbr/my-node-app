@@ -1,0 +1,12 @@
+node_modules/
+package-lock.json
+dist/
+projects/
+output.json
+result.json
+output.*
+report.*
+converted.*
+config.json
+*.txt
+*.exe
