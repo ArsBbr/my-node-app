@@ -1,0 +1,28 @@
+{
+  "name": "my-cli",
+  "version": "1.0.0",
+  "description": "CLI-приложение с архитектурой Команда (лабораторная работа №17)",
+  "license": "MIT",
+  "bin": {
+    "my-cli": "bin/my-cli.js"
+  },
+  "main": "bin/my-cli.js",
+  "scripts": {
+    "start": "node bin/my-cli.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "12.1.0",
+    "ora": "5.4.1"
+  },
+  "devDependencies": {
+    "jest": "29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
+  }
+}

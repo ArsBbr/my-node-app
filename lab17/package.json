@@ -1,0 +1,19 @@
+{
+  "name": "lab17",
+  "version": "1.0.0",
+  "description": "Лабораторная работа 17. Исследование методов создания CLI-приложений",
+  "private": true,
+  "scripts": {
+    "task1": "node task1/index.js",
+    "task2": "node task2/index.js",
+    "task3": "node task3/index.js",
+    "task4": "node task4/index.js"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "cli-progress": "3.12.0",
+    "commander": "12.1.0",
+    "inquirer": "8.2.6",
+    "ora": "5.4.1"
+  }
+}
