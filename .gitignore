@@ -1,6 +1,12 @@
 node_modules/
 .env
 .DS_Store
+data_*.txt
+processed_*.txt
+report_*.json
+student_*.txt
+project_*/
+demo.js*
 lab20/task5/certs/
 lab20/task5/access.log
 lab20/task5/public/big-file.bin
